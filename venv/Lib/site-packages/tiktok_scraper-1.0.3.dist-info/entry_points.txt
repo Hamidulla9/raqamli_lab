@@ -1,0 +1,3 @@
+[console_scripts]
+tiktok-scraper = tiktok_scraper.cli:main
+

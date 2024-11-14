@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: AutoChromedriver
+Version: 2.2.1
+Summary: Downloads and unzips chromedriver to curent directory
+Home-page: https://github.com/joeyism/autochromedriver
+Author: joeyism
+Author-email: joeyism101@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/joeyism/autochromedriver2.2.1.tar.gz
+Keywords: chromedriver,selenium,auto,automatic,download
+Platform: UNKNOWN
+Requires-Dist: selenium
+Requires-Dist: beautifulsoup4
+
+
+AutoChromedriver
+================
+
+A helper library to automatically download chromedriver to current directory
+
+Installation
+------------
+
+.. code-block::
+
+   pip3 install --user autochromedriver
+
+Usage
+-----
+
+Commandline
+^^^^^^^^^^^
+
+.. code-block:: bash
+
+   autochromdriver [optional:version]
+
+Library
+^^^^^^^
+
+If you want to download the latest version, run 
+
+.. code-block:: python
+
+   import AutoChromedriver
+
+   AutoChromedriver.download_chromedriver()
+
+If you want to download a specific version, run
+
+.. code-block:: python
+
+   import AutoChromedriver
+
+   AutoChromedriver.download_chromedriver(version="2.46")
+
+If you want to download a specific version to a specific location, run 
+
+.. code-block:: python
+
+   import AutoChromedriver
+
+   AutoChromedriver.download_chromedriver(version="2.46", location=".")
+
+Documentation
+-------------
+
+.. code-block:: python
+
+   def download_chromedriver(version="2.46")
+
+Passing in a version is possible, and it defaults to ``2.46``.
+
+
