@@ -57,7 +57,8 @@ class Takliflarimiz(models.Model):
 
 
 class Boglanish(models.Model):
-    xarita = models.CharField(max_length=255)
+    longitud = models.CharField(max_length=200)
+    latitude = models.CharField(max_length=200)
     description = RichTextField()
     telefon = models.CharField(max_length=255, blank=True, null=True)
     gmail = models.EmailField()

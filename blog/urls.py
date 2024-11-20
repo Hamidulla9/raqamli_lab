@@ -1,20 +1,17 @@
-from django.urls import path
-from .views import (
-    TaklifListView,
-    taklifdetail,
-    TakliflarimizListView,
-    takliflarimizdetail,
-    BoglanishListView,
-    boglanishdetail,
-)
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import YangilikViewSet, LoyihaViewSet, HodimViewSet, TaklifViewSet, TakliflarimizViewSet,\
+    BoglanishViewSet
+
+
+router = DefaultRouter()
+router.register(r'yangilik', YangilikViewSet)
+router.register(r'loyiha', LoyihaViewSet)
+router.register(r'hodim', HodimViewSet)
+router.register(r'taklif', TaklifViewSet)
+router.register(r'takliflarimiz', TakliflarimizViewSet)
+router.register(r'boglanish', BoglanishViewSet)
 
 urlpatterns = [
-    path('takliflar/', TaklifListView.as_view()),
-    path('takliflar/<int:pk>/', taklifdetail),
-
-    path('takliflarimiz/', TakliflarimizListView.as_view()),
-    path('takliflarimiz/<int:pk>/', takliflarimizdetail),
-
-    path('boglanish/', BoglanishListView.as_view()),
-    path('boglanish/<int:pk>/', boglanishdetail),
+    path('api/', include(router.urls)),
 ]

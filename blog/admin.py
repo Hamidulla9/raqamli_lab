@@ -32,5 +32,5 @@ class TakliflarimizAdmin(admin.ModelAdmin):
 class BoglanishAdmin(admin.ModelAdmin):
     list_display = ('telefon', 'gmail', 'created_at', 'updated_at',)
     search_fields = ('telefon',)
-    fields = ['xarita', 'description_uz', 'description_en', 'telefon', 'gmail', 'telegram_link', 'instagram_link',
+    fields = ['longitud', 'latitude', 'description_uz', 'description_en', 'telefon', 'gmail', 'telegram_link', 'instagram_link',
               'facebook_link',]

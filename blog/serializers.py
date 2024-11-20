@@ -37,4 +37,5 @@ class TakliflarimizSerializer(serializers.ModelSerializer):
 class BoglanishSerializer(serializers.ModelSerializer):
     class Meta:
         model = Boglanish
-        fields = ['id', 'xarita', 'description', 'telefon', 'gmail', 'telegram_link', 'instagram_link', 'facebook_link', 'created_at', 'updated_at']
+        fields = ['id', 'longitud', 'latitude', 'description', 'telefon', 'gmail', 'telegram_link', 'instagram_link', 'facebook_link',
+                  'created_at', 'updated_at']
